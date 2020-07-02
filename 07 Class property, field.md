@@ -1,14 +1,14 @@
 ### 클래스 property
 - 클래스 선언 시 property는 초기 값을 지정하거나 생성자에서 초기값을 지정해 주어야 한다.
 
-```swift
+```kotlin
 var <propertyName>[: <PropertyType>] [= <property_initializer>]
 	[<getter>]
 	[<setter>]
 ```
 
 ### Property 선언
-```swift
+```kotlin
 // setter, getter 선언
 val isEmpty: Boolean
 	get() = this.size == 0
@@ -32,7 +32,7 @@ const val MESSAGE = "Hello"
 - 변수 선언 후 초기값을 할당한 후 접근자를 통해 접근하면 setter와 getter가 호출되어 할당된다. 
 - field를 사용하고 싶다면 setter와 getter를 구현한 후 field 식별자를 사용한다.
 
-```swift
+```kotlin
 var counter = 0 // 지원필드
 	set(value) {
 		field = value + 1 // field 식별자 사용. counter = value + 1을 하게되면 재귀호출이 계속일어나 overflow 에러가 발생
@@ -41,7 +41,7 @@ var counter = 0 // 지원필드
 ```
 
 ### lateinit
-```swift
+```kotlin
 // 생성자에 포함되지 않고 setter/getter를 갖지 않을 때 var 로만 사용 가능
 // non-null 이어야 하고, 기본 타입이면 안됨.
 // 초기화 되기 전에 접근 시 exception을 발생 
