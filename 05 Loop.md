@@ -1,6 +1,6 @@
 ### for 
 
-```swift
+```kotlin
 // iterator
 for (item: Int in ints) { // ...
 }
@@ -19,7 +19,7 @@ for ((index, value) in array.withIndex()) {
 ### break, continue 사용 가능
 
 ### label
-```swift
+```kotlin
 // label을 통한 break
 loop@ for (i in 1..100) { 
 	for (j in 1..100) {
