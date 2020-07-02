@@ -1,7 +1,7 @@
 ### Boxing 
 - Value type의 값을 reference type 으로 변환 하는 경우. (스택에 있던 데이터가 힙으로 복사)
 
-```swift
+```kotlin
 val a: Int = 1
 val aRef: Int? = a
 ```
@@ -9,13 +9,13 @@ val aRef: Int? = a
 ### Unboxing
 - Reference type 의 값을 value type으로 변환 하는 경우. (힙에 있는 데이터가 스택으로 복사)
 
-```swift
+```kotlin
 val aRef: Int? = 100
 val a: Int = aRef ?: 0
 ```
 
 ### 비교 (==, ===)
-```swift
+```kotlin
 // "===" -> java의 == 와 같다.
 // "==" -> primitive type의 경우는 값 비교, object 의 경우 java의 equals와 같다.
 
