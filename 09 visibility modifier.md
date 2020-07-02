@@ -7,7 +7,7 @@
   - internal: 모듈 내에서 접근 가능  
   - public: 모든 접근 가능
 
-```swift
+```kotlin
 open class Outer {
 	private val a = 1
 	protected open val b = 2 
