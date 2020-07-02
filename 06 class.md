@@ -1,6 +1,6 @@
 ### 클래스 생성자
 
-```swift
+```kotlin
 // 클래스 선언
 class Test {
 }
@@ -32,7 +32,7 @@ class Test(val name: String) {
 ### 클래스 상속
 - Any (!=java.lang.Object) 를 상속
 
-```swift
+```kotlin
 // 상속 선언
 // open 키워드는 상속 가능을 의미. kotlin의 기본은 전부 final 이다.
 open class Base(p: Int)
