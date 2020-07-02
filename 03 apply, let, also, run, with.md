@@ -1,4 +1,4 @@
-![범위 지정 함수](https://github.com/diveallin/kotlin/kv_range.png)
+![범위 지정 함수](https://github.com/diveallin/kotlin/blob/master/kv_range.png)
 
 ### apply
 ```swift
