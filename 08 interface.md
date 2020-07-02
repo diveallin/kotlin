@@ -1,6 +1,6 @@
 ### interface
 
-```swift
+```kotlin
 // 추상 메소드 선언, 또는 구현을 포함시킬 수 있다.
 interface InterTest {
 	fun foo()
@@ -17,7 +17,7 @@ class Child: InterTest {
 
 ### interface property
 
-```swift
+```kotlin
 // interface 에 프로퍼티를 선언할 수 있다.
 // 선언한 property는 초기화할 수 없으나, setter/getter 접근자를 선언하는 것은 가능.
 interface MyInter {
@@ -36,7 +36,7 @@ class Child: MyInter {
 ```
 
 ### overriding 충돌 해결
-```swift
+```kotlin
 interface A {
 	fun foo() {
 		println("A-foo")
