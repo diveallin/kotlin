@@ -1,11 +1,13 @@
 ### 클래스 생성자
-
+- 클래스 선언
 ```kotlin
-// 클래스 선언
 class Test {
 }
+```
 
-// 기본 생성자 (primary 생성자)
+- 기본 생성자 (primary 생성자)
+  - class 이름 뒤에 선언
+```kotlin
 class Test public @Inject constructor(name: String) {
 }
 
@@ -14,14 +16,18 @@ class Test(name: String) {
 	// parameter 접근 가능
 	val u = name.toUpperCase()
 }
+```
 
-// 클래스 선언 시 생성자와 프로퍼티 선언 
+  - 클래스 선언 시 생성자와 프로퍼티 선언 
+```kotlin
 class Test(val name: String, val lastName: String) {
 }
+```
 
-// 보조 생성자
-// 클래스 내에서 constructor 로 선언
-// 보조 생성자는 직,간접적으로 주요 생성자를 호출해야 한다.
+- 보조 생성자
+  - 클래스 내에서 constructor 로 선언
+  - 보조 생성자는 직,간접적으로 주요 생성자를 호출해야 한다.
+```kotlin  
 class Test(val name: String) {
 	constructor(name: String, lastName: String): this(name) {
 		...
@@ -31,9 +37,8 @@ class Test(val name: String) {
 
 ### 클래스 상속
 - Any (!=java.lang.Object) 를 상속
-
+- 상속 선언
 ```kotlin
-// 상속 선언
 // open 키워드는 상속 가능을 의미. kotlin의 기본은 전부 final 이다.
 open class Base(p: Int)
 class Child(p: Int) : Base(p)
@@ -43,10 +48,12 @@ class MyView: View {
 	constructor(ctx: Context) : super(ctx)
 	constructor(ctx: Context, attrs: AttributeSet): super(ctx, attrs)
 }
+```
 
-// method overriding 
-// 명시적으로 open 선언이 되어 있어야 한다.
-// 당연히 final class 는 open 멤버를 가질 수 없다.
+- method overriding 
+  - 명시적으로 open 선언이 되어 있어야 한다.
+  - 당연히 final class 는 open 멤버를 가질 수 없다.
+```kotlin
 open class Base {
 	open fun v() {}
 	fun nv() {}
@@ -54,17 +61,21 @@ open class Base {
 class Child: Base() {
 	override fun v() {}
 }
+```
 
-// property overriding 
+- property overriding 
+```kotlin
 open class Foo {
 	open val x: Int get() {...}
 }
 class Bar1: Foo() {
 	override val x: Int = ...
 }
+```
 
-// 상위 호출
-// super.x()
+- 상위 호출
+```kotlin
+super.x()
 
 // inner class 에서 outer 호출. super@Outer
 class Bar: Foo() {
