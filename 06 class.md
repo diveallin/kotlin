@@ -3,6 +3,8 @@
 ```kotlin
 class Test {
 }
+// 내용이 없다면 {} 생략 가능 
+class Test
 ```
 
 - 기본 생성자 (primary 생성자)
@@ -13,8 +15,13 @@ class Test public @Inject constructor(name: String) {
 
 // 접근자와 annotation 정보가 없다면 constructor 문구 삭제 가능 
 class Test(name: String) {
-	// parameter 접근 가능
-	val u = name.toUpperCase()
+  // parameter 접근 가능
+  val u = name.toUpperCase()
+  
+  // 기본 생성자의 경우 init {}에서 초기화
+  init {
+    // Do
+  }
 }
 ```
 
