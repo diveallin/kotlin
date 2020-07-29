@@ -5,7 +5,9 @@
 
 ### Data class 사용 예)
 ```kotlin
-data class User(val name: String, val age: Int)// parameter initdata class User(val name: String = "", val age: Int = 0)
+data class User(val name: String, val age: Int)
+// parameter init
+data class User(val name: String = "", val age: Int = 0)
 ```
 
 ### 복사
