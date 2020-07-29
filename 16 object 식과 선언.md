@@ -77,7 +77,13 @@ DataProviderManager.registerDataProvider(...)
 // factory method로 생성 시에도 사용 가능
 class MyClass {
 	companion object Factory {
-		fun create(): MyClass = MyClass() 
+		const val name = "MyClass"
+		// Java 에서 static 으로 사용하도록 @JvmStatic 을 붙여준다.
+		@JvmStatic fun create(): MyClass = MyClass() 
+		
+		// companion object 내에서 String과 기본타입만 const를 할 수 있다.
+		// 그 외 object 들은 @JvmField 로 만들 수 있다.
+		@JvmField Test = Test()
 	}
 }
 val instance = MyClass.create()
@@ -85,9 +91,10 @@ val instance = MyClass.create()
 // 이름 생략 가능 
 class MyClass { 
 	companion object { 
+		@JvmStatic fun create(): MyClass = MyClass() 
 	}
 }
-val x = MyClass.Companion
+val x = MyClass.create()
 ```
 
 ### object 식과 object 선언의 차이
