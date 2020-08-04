@@ -33,7 +33,7 @@ class Test(val name: String, val lastName: String) {
 
 - 보조 생성자
   - 클래스 내에서 constructor 로 선언
-  - 보조 생성자는 직,간접적으로 주요 생성자를 호출해야 한다.
+  - 주 생성자가 정의되어 있다면 보조 생성자는 직,간접적으로 주요 생성자를 호출해야 한다.
 ```kotlin  
 class Test(val name: String) {
 	constructor(name: String, lastName: String): this(name) {
