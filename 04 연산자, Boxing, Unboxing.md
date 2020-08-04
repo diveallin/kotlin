@@ -36,6 +36,9 @@ println(t1 === t2) // 컴파일 에러
 - toDouble(): Double 
 - toChar(): Char
 
+### 전개 연산자 ("*")
+ *A : A 배열의 데이터를 나열 
+
 ### 쉬프트 연산
 - shl(bits) ­ 부호있는 왼쪽 시프트 (자바의 << )
 - shr(bits) ­ 부호있는 오른쪽 시프트 (자바의 >> )
