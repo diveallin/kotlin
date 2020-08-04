@@ -71,6 +71,10 @@ class Child: Base() {
 ```
 
 - property overriding 
+  - 상위에 val 로 선언된 프로퍼티는 하위에서 val, var 로 재정의 가능
+  - 상위에서 var로 선언된 프로퍼티는 하위에서 var로 재정의 가능, val은 불가
+  - 상위에서 Nullable로 선언된 경우 하위에서 Non-Null 로 선언 가능
+  - 상위에서 Non-Null 로 선언된 경우 하위에서는 Nullable로 재정의 불가
 ```kotlin
 open class Foo {
 	open val x: Int get() {...}
